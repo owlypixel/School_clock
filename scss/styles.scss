@@ -74,12 +74,47 @@ body{
 			0.96px -0.96px 0 #999,
 			-0.16px 0.16px 0 #777,
 			-0.96px -0.94px 0 #fff, inset 0 0 33px rgba(0, 0, 0, 0.2727272727272727), inset 0 0 99px rgba(0, 0, 0, 0.18181818181818182), 0 0 3px rgba(0, 0, 0, 0.18181818181818182),
-			inset 0px -7px 2px 2px #7b91bd, inset 2px 4px 2px 2px #7b91bd,
-			
-			;
-		
-	
-		       
+			inset 0px -7px 2px 2px #7b91bd, inset 2px 4px 2px 2px #7b91bd;
+		.numbers{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 320px;
+			height: 320px;
+			position: absolute;
+			@include absolute-centered;
+		}
+		.line-holder{
+			position: absolute;
+			width: 5px;
+			height: 160px;
+			left: 50%;
+			transform-origin: bottom;
+			$start-pos: 0;
+			$step-angle: 30;
+			@for $i from 1 through 12 {
+				&:nth-child(#{$i}){
+					transform: translate(-50%, -50%) rotate( $start-pos + $step-angle + deg);
+					span{
+						position: absolute;
+						transform: translateX(-50%) rotate( -($start-pos + $step-angle) + deg);
+					}
+				}
+				$start-pos: $start-pos + $step-angle;
+			}
+			span {
+				font-size: 25px;
+				color: #fff;
+				font-family: Lato;
+				font-weight: bold;
+				&:before{
+
+				}
+				&:after{
+
+				}
+			}
+		}
 	}
 	
 }
