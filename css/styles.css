@@ -585,6 +585,18 @@ body {
           transform: translateX(-50%) rotate(-30deg);
 }
 
+.clock .face .line-holder:nth-child(1) span:before {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "1";
+  position: absolute;
+  color: rgba(9, 254, 254, 0.3);
+  zoom: 121%;
+}
+
 .clock .face .line-holder:nth-child(2) {
   -webkit-transform: translate(-50%, -50%) rotate(60deg);
       -ms-transform: translate(-50%, -50%) rotate(60deg);
@@ -596,6 +608,18 @@ body {
   -webkit-transform: translateX(-50%) rotate(-60deg);
       -ms-transform: translateX(-50%) rotate(-60deg);
           transform: translateX(-50%) rotate(-60deg);
+}
+
+.clock .face .line-holder:nth-child(2) span:before {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "2";
+  position: absolute;
+  color: rgba(9, 254, 254, 0.3);
+  zoom: 121%;
 }
 
 .clock .face .line-holder:nth-child(3) {
@@ -611,6 +635,18 @@ body {
           transform: translateX(-50%) rotate(-90deg);
 }
 
+.clock .face .line-holder:nth-child(3) span:before {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "3";
+  position: absolute;
+  color: rgba(9, 254, 254, 0.3);
+  zoom: 121%;
+}
+
 .clock .face .line-holder:nth-child(4) {
   -webkit-transform: translate(-50%, -50%) rotate(120deg);
       -ms-transform: translate(-50%, -50%) rotate(120deg);
@@ -622,6 +658,18 @@ body {
   -webkit-transform: translateX(-50%) rotate(-120deg);
       -ms-transform: translateX(-50%) rotate(-120deg);
           transform: translateX(-50%) rotate(-120deg);
+}
+
+.clock .face .line-holder:nth-child(4) span:before {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "4";
+  position: absolute;
+  color: rgba(9, 254, 254, 0.3);
+  zoom: 121%;
 }
 
 .clock .face .line-holder:nth-child(5) {
@@ -637,6 +685,18 @@ body {
           transform: translateX(-50%) rotate(-150deg);
 }
 
+.clock .face .line-holder:nth-child(5) span:before {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "5";
+  position: absolute;
+  color: rgba(9, 254, 254, 0.3);
+  zoom: 121%;
+}
+
 .clock .face .line-holder:nth-child(6) {
   -webkit-transform: translate(-50%, -50%) rotate(180deg);
       -ms-transform: translate(-50%, -50%) rotate(180deg);
@@ -648,6 +708,18 @@ body {
   -webkit-transform: translateX(-50%) rotate(-180deg);
       -ms-transform: translateX(-50%) rotate(-180deg);
           transform: translateX(-50%) rotate(-180deg);
+}
+
+.clock .face .line-holder:nth-child(6) span:before {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "6";
+  position: absolute;
+  color: rgba(9, 254, 254, 0.3);
+  zoom: 121%;
 }
 
 .clock .face .line-holder:nth-child(7) {
@@ -663,6 +735,18 @@ body {
           transform: translateX(-50%) rotate(-210deg);
 }
 
+.clock .face .line-holder:nth-child(7) span:before {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "7";
+  position: absolute;
+  color: rgba(9, 254, 254, 0.3);
+  zoom: 121%;
+}
+
 .clock .face .line-holder:nth-child(8) {
   -webkit-transform: translate(-50%, -50%) rotate(240deg);
       -ms-transform: translate(-50%, -50%) rotate(240deg);
@@ -674,6 +758,18 @@ body {
   -webkit-transform: translateX(-50%) rotate(-240deg);
       -ms-transform: translateX(-50%) rotate(-240deg);
           transform: translateX(-50%) rotate(-240deg);
+}
+
+.clock .face .line-holder:nth-child(8) span:before {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "8";
+  position: absolute;
+  color: rgba(9, 254, 254, 0.3);
+  zoom: 121%;
 }
 
 .clock .face .line-holder:nth-child(9) {
@@ -689,6 +785,18 @@ body {
           transform: translateX(-50%) rotate(-270deg);
 }
 
+.clock .face .line-holder:nth-child(9) span:before {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "9";
+  position: absolute;
+  color: rgba(9, 254, 254, 0.3);
+  zoom: 121%;
+}
+
 .clock .face .line-holder:nth-child(10) {
   -webkit-transform: translate(-50%, -50%) rotate(300deg);
       -ms-transform: translate(-50%, -50%) rotate(300deg);
@@ -700,6 +808,18 @@ body {
   -webkit-transform: translateX(-50%) rotate(-300deg);
       -ms-transform: translateX(-50%) rotate(-300deg);
           transform: translateX(-50%) rotate(-300deg);
+}
+
+.clock .face .line-holder:nth-child(10) span:before {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "10";
+  position: absolute;
+  color: rgba(9, 254, 254, 0.3);
+  zoom: 121%;
 }
 
 .clock .face .line-holder:nth-child(11) {
@@ -715,6 +835,18 @@ body {
           transform: translateX(-50%) rotate(-330deg);
 }
 
+.clock .face .line-holder:nth-child(11) span:before {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "11";
+  position: absolute;
+  color: rgba(9, 254, 254, 0.3);
+  zoom: 121%;
+}
+
 .clock .face .line-holder:nth-child(12) {
   -webkit-transform: translate(-50%, -50%) rotate(360deg);
       -ms-transform: translate(-50%, -50%) rotate(360deg);
@@ -728,9 +860,117 @@ body {
           transform: translateX(-50%) rotate(-360deg);
 }
 
+.clock .face .line-holder:nth-child(12) span:before {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "12";
+  position: absolute;
+  color: rgba(9, 254, 254, 0.3);
+  zoom: 121%;
+}
+
 .clock .face .line-holder span {
   font-size: 25px;
   color: #fff;
   font-family: Lato;
   font-weight: bold;
+}
+
+.clock .face .hand {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 50%;
+  height: 6px;
+}
+
+.clock .face .hour-hand {
+  width: 165px;
+  border-right: 120px solid #b3defd;
+  border-left: 0px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-top: 7px solid transparent;
+  height: 20px;
+}
+
+.clock .face .hour-hand:after {
+  content: '';
+  position: absolute;
+  border-right: 60px solid #b3defd;
+  border-left: 0px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-top: 7px solid transparent;
+  height: 7px;
+  -webkit-transform: translateY(-50%) rotate(180deg) scale(1, -1);
+      -ms-transform: translateY(-50%) rotate(180deg) scale(1, -1);
+          transform: translateY(-50%) rotate(180deg) scale(1, -1);
+  left: 164px;
+  top: 50%;
+}
+
+.clock .face .min-hand {
+  width: 165px;
+  border-right: 100px solid #b3defd;
+  border-left: 0px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-top: 7px solid transparent;
+  height: 20px;
+}
+
+.clock .face .min-hand:after {
+  content: '';
+  position: absolute;
+  border-right: 45px solid #b3defd;
+  border-left: 0px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-top: 7px solid transparent;
+  height: 6px;
+  -webkit-transform: translateY(-50%) rotate(180deg) scale(1, -1);
+      -ms-transform: translateY(-50%) rotate(180deg) scale(1, -1);
+          transform: translateY(-50%) rotate(180deg) scale(1, -1);
+  left: 164px;
+  top: 50%;
+}
+
+.clock .face .second-hand {
+  width: 140px;
+  height: 5px;
+  background: #0066ff;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-100%);
+      -ms-transform: translateY(-50%) translateX(-100%);
+          transform: translateY(-50%) translateX(-100%);
+}
+
+.clock .face .second-hand:before {
+  top: 50%;
+  content: '';
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background: #0066ff;
+  border-radius: 50%;
+  right: -9px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.clock .face .second-hand:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(at top, #fff, #a2a2a2);
+  border-radius: 50%;
+  right: -6px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
 }

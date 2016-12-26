@@ -98,6 +98,14 @@ body{
 					span{
 						position: absolute;
 						transform: translateX(-50%) rotate( -($start-pos + $step-angle) + deg);
+						&:before{
+							@include absolute-centered;
+							content: '#{$i}';
+							position: absolute;
+							
+							color: rgba(9,254,254,0.3);
+							zoom: 121%;  
+						}
 					}
 				}
 				$start-pos: $start-pos + $step-angle;
@@ -107,14 +115,105 @@ body{
 				color: #fff;
 				font-family: Lato;
 				font-weight: bold;
-				&:before{
+			}
+		}
+		.glint{
+			// position: absolute;
+			// top: 60px;
+			// left: 60px;
+			// width: 56px;
+			// height: 0px;
+			// background: linear-gradient(135deg, #838b98, #dbdce0);
+			// transform: rotate(-45deg);
+			// box-shadow: 1px 1px 1px 1px #838b98;
+			// box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
 
-				}
-				&:after{
+		}
+		.hand{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 50%;
+			height: 6px;
+		}
+		.hour-hand{
+			width: 165px;
+			border-right: 120px solid #b3defd;
+			border-left: 0px solid transparent;
+			border-bottom: 7px solid transparent;
+			border-top: 7px solid transparent;
+			height: 20px;
+			&:after{
+				content: '';
+				position: absolute;
+				border-right: 60px solid #b3defd;
+				border-left: 0px solid transparent;
+				border-bottom: 7px solid transparent;
+				border-top: 7px solid transparent;
+				height: 7px;
+				transform: translateY(-50%) rotate(180deg) scale(1, -1);
+				left: 164px;
+				top: 50%
+			}
+		}
+		.min-hand{
+			width: 165px;
+			border-right: 100px solid #b3defd;
+			border-left: 0px solid transparent;
+			border-bottom: 7px solid transparent;
+			border-top: 7px solid transparent;
+			height: 20px;
+			&:after{
+				content: '';
+				position: absolute;
+				// width: 100px;
+				border-right: 45px solid #b3defd;
+				border-left: 0px solid transparent;
+				border-bottom: 7px solid transparent;
+				border-top: 7px solid transparent;
+				height: 6px;
+				transform: translateY(-50%) rotate(180deg) scale(1, -1);
+				left: 164px;
+				top: 50%
 
-				}
+
+			}
+		}
+		.second-hand{
+			width: 140px;
+			height: 5px;
+			background: #0066ff;
+			left: 50%;
+			transform: translateY(-50%) translateX(-100%);
+			&:before{
+				top: 50%;
+				content: '';
+				position: absolute;
+				width: 17px;
+				height: 17px;
+				background: #0066ff;
+				border-radius: 50%;
+				right: -9px;
+				transform: translateY(-50%);
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				background: radial-gradient(at top, #fff, #a2a2a2);
+				border-radius: 50%;
+				right: -6px;
+				transform: translateY(-50%);
+				top: 50%;
 			}
 		}
 	}
 	
 }
+
+
+
+
+
+
