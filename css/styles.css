@@ -451,14 +451,22 @@ template {
 }
 
 body {
-  background-color: #00A99E;
+  height: 100vh;
+  background: linear-gradient(#123 50%, #4d4d54);
+  overflow: hidden;
 }
 
 .wrapper {
-  width: 1000px;
-  height: 100vh;
-  margin: auto;
-  text-align: center;
+  overflow: hidden;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .clock {
@@ -566,6 +574,7 @@ body {
   position: absolute;
   width: 5px;
   height: 160px;
+  top: 25%;
   left: 50%;
   -webkit-transform-origin: bottom;
       -ms-transform-origin: bottom;
@@ -875,8 +884,62 @@ body {
 .clock .face .line-holder span {
   font-size: 25px;
   color: #fff;
-  font-family: Lato;
+  font-family: Lato, sans-serif;
   font-weight: bold;
+}
+
+.clock .face .line-holder:nth-child(3n+3) span {
+  font-size: 42px;
+}
+
+.clock .face .glint, .clock .face .glint2 {
+  position: absolute;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+.clock .face .glint {
+  top: 60px;
+  left: 60px;
+  width: 56px;
+  height: 28px;
+  background: linear-gradient(135deg, #838b98, #dbdce0);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  border-radius: 25% 25% 0 0;
+}
+
+.clock .face .glint:after {
+  content: '';
+  position: absolute;
+  width: 56px;
+  height: 10px;
+  background: #83c3d3;
+  bottom: -40%;
+  left: 0;
+}
+
+.clock .face .glint2 {
+  top: 93px;
+  left: 40px;
+  width: 35px;
+  height: 30px;
+  background: #bdccdd;
+  -webkit-transform: rotate(-54deg);
+      -ms-transform: rotate(-54deg);
+          transform: rotate(-54deg);
+  border-radius: 25% 0 0 0;
+}
+
+.clock .face .glint2:after {
+  content: '';
+  position: absolute;
+  width: 33px;
+  height: 10px;
+  background: #d8dbe0;
+  bottom: -40%;
+  left: 0;
 }
 
 .clock .face .hand {
@@ -887,21 +950,24 @@ body {
           transform: translateY(-50%);
   width: 50%;
   height: 6px;
+  -webkit-transform-origin: 100%;
+      -ms-transform-origin: 100%;
+          transform-origin: 100%;
 }
 
 .clock .face .hour-hand {
   width: 165px;
-  border-right: 120px solid #b3defd;
-  border-left: 0px solid transparent;
+  border-right: 100px solid #b3defd;
   border-bottom: 7px solid transparent;
   border-top: 7px solid transparent;
   height: 20px;
+  right: 50%;
 }
 
 .clock .face .hour-hand:after {
   content: '';
   position: absolute;
-  border-right: 60px solid #b3defd;
+  border-right: 45px solid #b3defd;
   border-left: 0px solid transparent;
   border-bottom: 7px solid transparent;
   border-top: 7px solid transparent;
@@ -915,11 +981,12 @@ body {
 
 .clock .face .min-hand {
   width: 165px;
-  border-right: 100px solid #b3defd;
+  border-right: 120px solid #b3defd;
   border-left: 0px solid transparent;
   border-bottom: 7px solid transparent;
   border-top: 7px solid transparent;
   height: 20px;
+  right: 50%;
 }
 
 .clock .face .min-hand:after {
@@ -973,4 +1040,58 @@ body {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   top: 50%;
+}
+
+.anim {
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.snow, .snow:before, .snow:after {
+  position: absolute;
+  top: -500px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: radial-gradient(3px 3px at 89px 62px, rgba(255, 255, 255, 0.8) 50%, transparent), radial-gradient(5px 5px at 165px 374px, rgba(255, 255, 255, 0.7) 50%, transparent), radial-gradient(4px 4px at 307px 187px, rgba(255, 255, 255, 0.9) 50%, transparent), radial-gradient(6px 6px at 61px 411px, white 50%, transparent), radial-gradient(5px 5px at 450px 403px, rgba(255, 255, 255, 0.9) 50%, transparent), radial-gradient(5px 5px at 306px 291px, rgba(255, 255, 255, 0.6) 50%, transparent), radial-gradient(5px 5px at 50px 403px, rgba(255, 255, 255, 0.7) 50%, transparent), radial-gradient(3px 3px at 36px 290px, rgba(255, 255, 255, 0.7) 50%, transparent), radial-gradient(3px 3px at 129px 439px, rgba(255, 255, 255, 0.7) 50%, transparent), radial-gradient(4px 4px at 139px 266px, white 50%, transparent), radial-gradient(5px 5px at 30px 156px, rgba(255, 255, 255, 0.6) 50%, transparent), radial-gradient(4px 4px at 457px 8px, rgba(255, 255, 255, 0.9) 50%, transparent), radial-gradient(5px 5px at 133px 277px, white 50%, transparent), radial-gradient(4px 4px at 10px 85px, rgba(255, 255, 255, 0.6) 50%, transparent), radial-gradient(6px 6px at 310px 315px, rgba(255, 255, 255, 0.6) 50%, transparent), radial-gradient(4px 4px at 402px 421px, rgba(255, 255, 255, 0.7) 50%, transparent), radial-gradient(5px 5px at 168px 283px, rgba(255, 255, 255, 0.7) 50%, transparent), radial-gradient(4px 4px at 467px 409px, rgba(255, 255, 255, 0.9) 50%, transparent), radial-gradient(4px 4px at 262px 200px, rgba(255, 255, 255, 0.7) 50%, transparent), radial-gradient(4px 4px at 220px 96px, white 50%, transparent);
+  background-size: 500px 500px;
+  -webkit-animation: snow 3s linear infinite;
+          animation: snow 3s linear infinite;
+  content: "";
+}
+
+.snow:after {
+  margin-left: -166.66667px;
+  opacity: .4;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-direction: reverse;
+          animation-direction: reverse;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+.snow:before {
+  -webkit-animation-duration: 9s;
+          animation-duration: 9s;
+  -webkit-animation-direction: reverse;
+          animation-direction: reverse;
+  margin-left: -250px;
+  opacity: .65;
+  -webkit-filter: blur(1.5px);
+          filter: blur(1.5px);
+}
+
+@-webkit-keyframes snow {
+  to {
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px);
+  }
+}
+
+@keyframes snow {
+  to {
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px);
+  }
 }

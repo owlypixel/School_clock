@@ -4,18 +4,20 @@
 	<meta charset="UTF-8">
 	<title>School clock</title>
 	<link rel="stylesheet" href="css/styles.css">
-	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet"> -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet"> -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 </head>
 <body>
 	<div class="wrapper">
+	<div class="snow"></div>
 		<div class="clock">
 			<div class="rim"></div>
 			<div class="rim upper"></div>
 			<div class="line"></div>
 			<div class="face">
+				<div class="flares">
+					<div class="glint"></div>
+					<div class="glint2"></div>
+				</div>
 				<div class="numbers">
 					<div class="line-holder"><span>1</span></div>
 					<div class="line-holder"><span>2</span></div>
@@ -30,14 +32,13 @@
 					<div class="line-holder"><span>11</span></div>
 					<div class="line-holder"><span>12</span></div>
 				</div>
-				<div class="glint"></div>
-				<div class="hand hour-hand"></div>
-				<div class="hand min-hand"></div>
-				<div class="hand second-hand"></div>
+				<div class="hand min-hand anim"></div>
+				<div class="hand hour-hand anim"></div>
+				<div class="hand second-hand anim"></div>
 			</div>
 		</div>
 	</div>
-
+	
 	<script src="js/main.js"></script>
 </body>
 </html>

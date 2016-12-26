@@ -5,13 +5,15 @@
 	box-sizing: border-box;
 }
 body{
-	background-color: #00A99E;
+	height: 100vh;
+  	background: linear-gradient(#123 50%, #4d4d54);
+	overflow: hidden;
 }
 .wrapper{
-	width: 1000px;
-	height: 100vh;
-	margin: auto;
-	text-align: center;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .clock{
 	width: 400px;
@@ -88,6 +90,7 @@ body{
 			position: absolute;
 			width: 5px;
 			height: 160px;
+			top: 25%;
 			left: 50%;
 			transform-origin: bottom;
 			$start-pos: 0;
@@ -102,7 +105,6 @@ body{
 							@include absolute-centered;
 							content: '#{$i}';
 							position: absolute;
-							
 							color: rgba(9,254,254,0.3);
 							zoom: 121%;  
 						}
@@ -113,21 +115,52 @@ body{
 			span {
 				font-size: 25px;
 				color: #fff;
-				font-family: Lato;
+				font-family: Lato, sans-serif;
 				font-weight: bold;
 			}
 		}
+		.line-holder:nth-child(3n+3) span{
+			font-size: 42px;
+		}
+		.glint, .glint2{
+			position: absolute;
+			filter: blur(3px);
+		}
 		.glint{
-			// position: absolute;
-			// top: 60px;
-			// left: 60px;
-			// width: 56px;
-			// height: 0px;
-			// background: linear-gradient(135deg, #838b98, #dbdce0);
-			// transform: rotate(-45deg);
-			// box-shadow: 1px 1px 1px 1px #838b98;
-			// box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
-
+			top: 60px;
+			left: 60px;
+			width: 56px;
+			height: 28px;
+			background: linear-gradient(135deg, #838b98, #dbdce0);
+			transform: rotate(-45deg);
+			border-radius: 25% 25% 0 0;
+			&:after{
+				content: '';
+				position: absolute;
+				width: 56px;
+				height: 10px;
+				background: #83c3d3;
+				bottom: -40%;
+				left: 0;
+			}
+		}
+		.glint2{
+			top: 93px;
+			left: 40px;
+			width: 35px;
+			height: 30px;
+			background: #bdccdd;
+			transform: rotate(-54deg);
+			border-radius: 25% 0 0 0;
+			&:after{
+				content: '';
+				position: absolute;
+				width: 33px;
+				height: 10px;
+				background: #d8dbe0;
+				bottom: -40%;
+				left: 0;
+			}
 		}
 		.hand{
 			position: absolute;
@@ -135,18 +168,19 @@ body{
 			transform: translateY(-50%);
 			width: 50%;
 			height: 6px;
+			transform-origin: 100%;
 		}
 		.hour-hand{
 			width: 165px;
-			border-right: 120px solid #b3defd;
-			border-left: 0px solid transparent;
+			border-right: 100px solid #b3defd;
 			border-bottom: 7px solid transparent;
 			border-top: 7px solid transparent;
 			height: 20px;
+			right: 50%;
 			&:after{
 				content: '';
 				position: absolute;
-				border-right: 60px solid #b3defd;
+				border-right: 45px solid #b3defd;
 				border-left: 0px solid transparent;
 				border-bottom: 7px solid transparent;
 				border-top: 7px solid transparent;
@@ -158,15 +192,15 @@ body{
 		}
 		.min-hand{
 			width: 165px;
-			border-right: 100px solid #b3defd;
+			border-right: 120px solid #b3defd;
 			border-left: 0px solid transparent;
 			border-bottom: 7px solid transparent;
 			border-top: 7px solid transparent;
 			height: 20px;
+			right: 50%;
 			&:after{
 				content: '';
 				position: absolute;
-				// width: 100px;
 				border-right: 45px solid #b3defd;
 				border-left: 0px solid transparent;
 				border-bottom: 7px solid transparent;
@@ -175,8 +209,6 @@ body{
 				transform: translateY(-50%) rotate(180deg) scale(1, -1);
 				left: 164px;
 				top: 50%
-
-
 			}
 		}
 		.second-hand{
@@ -209,7 +241,59 @@ body{
 			}
 		}
 	}
-	
+}
+.anim{
+	transition: all 0.5s;
+	transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+// Awesome Snow CSS by @KeithClark pen <3
+// http://codepen.io/keithclark/pen/yBcsr
+$d: 20;      // density
+$w: 500;     // grid size
+$s: 3s;       // speed
+$grad: ();
+@for $i from 0 to $d {
+  $v: random(4) + 2;
+  $a: random(5) * .1 + .5;
+  $grad: $grad, radial-gradient(
+      $v+px $v+px at
+      (random($w - $v * 2) + $v)+px
+      (random($w - $v * 2) + $v)+px, 
+      rgba(255,255,255,$a) 50%,
+      rgba(0,0,0,0)
+  ) !global;
+}
+
+.snow, .snow:before, .snow:after {
+  position: absolute;
+  top: -$w + px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: $grad;
+  background-size: $w + px $w + px;
+  animation: snow $s linear infinite;
+  content: "";
+}
+.snow:after {
+  margin-left: -$w/3 + px;
+  opacity: .4;
+  animation-duration: $s*2;
+  animation-direction: reverse;
+  filter: blur(3px);
+}
+.snow:before {
+  animation-duration: $s*3;
+  animation-direction: reverse;
+  margin-left: -$w/2 + px;
+  opacity: .65;
+  filter: blur(1.5px);
+}
+@keyframes snow {
+  to {
+    transform: translateY($w + px);
+  }
 }
 
 
