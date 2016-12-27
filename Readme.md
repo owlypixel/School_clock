@@ -1,4 +1,4 @@
-## School Clock
+## Animated School Clock
 ![school clock screenshot](https://github.com/owlypixel/School_clock/raw/master/assets/screenshot.png)
 
 ## What is this?
